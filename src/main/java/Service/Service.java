@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import Repository.Repository;
+import repository.Repository;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,5 +13,13 @@ public class Service {
 
     public List<Person> getPersonsByCity(String city) {
         return repository.getPersonsByCity(city);
+    }
+
+    public List<Person> getPersonsByAge(int age) {
+        return repository.getPersonsByAge(age);
+    }
+
+    public List<Person> getPersonsByNameAndSurname(String name, String surname) {
+        return repository.getPersonsByNameAndSurname(name, surname);
     }
 }

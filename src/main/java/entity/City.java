@@ -12,18 +12,14 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Person {
+@Table(name = "cities")
+public class City {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
     private String name;
-    @Id
-    private String surname;
-    @Id
-    private int age;
 
-    @Column
-    private String phone_number;
-
-    @ManyToOne(optional = false)
-    private City city;
 }
