@@ -1,6 +1,6 @@
-package Controller;
+package controller;
 
-import Service.Service;
+import service.Service;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

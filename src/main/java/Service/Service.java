@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import Repository.Repository;
+import repository.Repository;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 

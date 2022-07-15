@@ -1,4 +1,4 @@
-package Repository;
+package repository;
 
 
 import entity.Person;
@@ -13,12 +13,12 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 @org.springframework.stereotype.Repository
-@Transactional
 public class Repository {
 
     @PersistenceContext
     private EntityManager entityManager;
 
+    @Transactional
     public void setEntityManager() {
         var names = List.of("Вася", "Петя", "Коля", "Саша");
         var surnames = List.of("Иванов", "Петров", "Сидоров", "Смирнов");
@@ -38,6 +38,7 @@ public class Repository {
                 });
     }
 
+    @Transactional
     public List<Person> getPersonsByCity (String city) {
         setEntityManager();
         List<Person> persons = null;
