@@ -1,6 +1,8 @@
 package service;
 
-import repository.Repository;
+import interface_rep.CityRepository;
+import interface_rep.PersonRepository;
+import org.springframework.data.domain.Sort;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,18 +10,22 @@ import java.util.List;
 
 @org.springframework.stereotype.Service
 public class Service {
+
     @Autowired
-    private Repository repository = new Repository();
+    private CityRepository cityRepository;
+
+    @Autowired
+    private PersonRepository personRepository;
 
     public List<Person> getPersonsByCity(String city) {
-        return repository.getPersonsByCity(city);
+        return personRepository.findByCity(cityRepository.findByName(city));
     }
 
     public List<Person> getPersonsByAge(int age) {
-        return repository.getPersonsByAge(age);
+        return personRepository.findByAgeLessThan(age, Sort.by("age").ascending());
     }
 
     public List<Person> getPersonsByNameAndSurname(String name, String surname) {
-        return repository.getPersonsByNameAndSurname(name, surname);
+        return personRepository.findByNameAndSurname(name, surname);
     }
 }

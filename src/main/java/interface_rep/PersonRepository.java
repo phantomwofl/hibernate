@@ -1,4 +1,4 @@
-package Interface_rep;
+package interface_rep;
 
 import entity.City;
 import entity.Person;

@@ -1,7 +1,7 @@
 package ru.netology.hibernate;
 
-import Interface_rep.CityRepository;
-import Interface_rep.PersonRepository;
+import interface_rep.CityRepository;
+import interface_rep.PersonRepository;
 import entity.City;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
