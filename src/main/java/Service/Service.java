@@ -1,7 +1,7 @@
 package service;
 
-import interface_rep.CityRepository;
-import interface_rep.PersonRepository;
+import repository.CityRepository;
+import repository.PersonRepository;
 import org.springframework.data.domain.Sort;
 import entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
